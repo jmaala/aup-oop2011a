@@ -1,0 +1,20 @@
+multiple inheritance
+
+mixins-
+	e.g.
+		Grapics-display, position
+		Rectangle-draw
+		class Button:
+			def __init__(self):
+				self.graphics=Graphic()
+				self.shape=Rectangle()
+			def draw:
+				self.shape.draw
+
+abstract class- 
+	-can't be instantiated
+	-meant to be extended
+	-serves as a blue print of a class
+	-abstract is basic/minimum or a blueprint
+
+interfaces
