@@ -11,7 +11,7 @@ require_once "interfaces/Human.php";
 		{
 			return $this->_name;
 		}
-		public function isalive()
+		public function is_alive()
 		{
 			if($this->health > 0)
 			{

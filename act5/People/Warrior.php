@@ -3,10 +3,14 @@ require_once "interfaces/Human.php";
 require_once "interfaces/Fighter.php";
 require_once "Person.php";
 
-	abstract class Warrior extends Person implements Fighter
+	class Warrior extends Person implements Fighter
 	{
 	
 		public $damage=10;
+		function __construct($name)
+		{
+			$this->name=$name;
+		}
 		public function attack($target)
 		{
 			$attack=0;
@@ -27,6 +31,8 @@ require_once "Person.php";
 				$target->health=$target->health-$attack;
 				echo "Critical\n";
 			}
+			if($target->health<=0)
+				$target->health=0;
 			printf("%s attacks %s damage: %d\n%s's Health:%d\n", $this->name, $target->name, $attack, $target->name, $target->health);
 		}
 	

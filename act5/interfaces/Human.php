@@ -9,7 +9,7 @@
 	interface Human
 	{
 		public function getName();
-		public function isalive();
+		public function is_alive();
 		public function eat($food);
 		public function move();
 	}
