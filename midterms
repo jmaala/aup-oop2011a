@@ -1,0 +1,10 @@
+Domain Driven Design - a design architecture for organizing data in computing
+
+continue oopa2011a/Models/Entities/Rows/json.php
+
+1. Create a row object
+2. In its contruct method declare the legal properties that can be set
+3. In its save method, save it as a json string into a file whose path is found in the Config singleton.
+4. In index.php demonstrate how to use it through an interactive interface.(use PHP'S command line input)
+
+https://github.com/raeldc/aup-oop2011a
