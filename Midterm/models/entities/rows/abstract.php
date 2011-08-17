@@ -1,4 +1,5 @@
 <?php
+require_once "config.php";
 
 abstract class Abstracted {
     
@@ -17,7 +18,8 @@ abstract class Abstracted {
     
     public function save()
     {
-        return false;
+        $r_data = json_encode($this->data);
+        return file_put_contents(Config::instance()->path, $r_data);
     }
     
 		
