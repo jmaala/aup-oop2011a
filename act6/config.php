@@ -18,10 +18,10 @@ final class Config {
     
     function __get($key)
     {
-        if(empty($this->_config))
+        if(empty($this->config))
         {
             $config = file_get_contents(realpath(dirname(__FILE__)).'/config.json');
-            $this->config = json_decode($config);
+            $this->_config = json_decode($config);
         }
         
         if(isset($this->config->$key))

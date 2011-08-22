@@ -1,0 +1,14 @@
+rowset - collection or set of singular object
+$rowset->find(2)
+public function find($id)
+{
+	foreach($this->rows as $row)
+	{
+		if($row->id==$id)
+			return $row;
+	}
+}
+$rowset->save();
+$rowset->rows_array();
+
+
