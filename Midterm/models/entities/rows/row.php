@@ -1,7 +1,7 @@
 <?php
 require_once "abstract.php";
 
-	class row extends abstracted
+	class row extends Abstract_json
 	{
 		protected $data=array();
 		protected $columns=array();

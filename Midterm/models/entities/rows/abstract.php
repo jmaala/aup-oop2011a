@@ -1,7 +1,7 @@
 <?php
 require_once "config.php";
 
-abstract class Abstracted {
+abstract class Abstract_json {
     
     protected $columns = array();
     protected $data = array();
