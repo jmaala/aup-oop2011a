@@ -11,4 +11,11 @@ require_once "abstract.php";
 			$this->columns=array('id','name','age','gender');
 		}
 		
+		function __get($key)
+		{
+			
+			return array_key_exists($key, $this->data) ? $this->data[$key] : null; 
+		}
 	}
+	
+	
