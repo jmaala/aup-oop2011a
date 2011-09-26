@@ -2,11 +2,24 @@
 
 require_once "models/entities/rows/row.php";
 require_once "models/entities/rows/rowset.php";
+require_once "models/model.php";
 
 $x=0;
 $row = new row();
 $rowset = new rowset();
-while($x!=5)
+echo "Enter list Limit:";
+$limit=trim(fgets(STDIN));
+echo "Enter the id you want to find:";
+$id=trim(fgets(STDIN));
+$model = new data_model((array('limit'=>$limit,'id'=>$id)));
+echo "This is the list\n";
+print_r($model->getList());
+echo "This is ID ".$id."\n";
+print_r($model->getItem());
+echo "The total items in the list: ".$model->getTotal();
+
+
+/*while($x!=5)
 	{
 			echo "
 		  1. Add info\n
@@ -65,6 +78,6 @@ while($x!=5)
 			 break;
 		  }
 	}
-	$rowset->save();
+	$rowset->save();*/
 
 die();

@@ -1,0 +1,12 @@
+MVC- Model View Controller
+
+Application Logic(Controller)
+	Business Logic(Model-data)-decides what to display.
+		Display Logic(View)-how the model will be displayed, not what to display.
+
+
+Controller 
+	-accepts user interaction
+	-reacts according to user's activity
+	-decides which model to use
+	-decides which view to use

@@ -1,0 +1,22 @@
+interface model
+{
+	getList();
+	getItem();
+	getTotal();
+}
+
+class student model implements model
+{
+	function getList()
+	{
+		returns Rowset
+	}
+	function getItem()
+	{
+		return Row
+	}
+	function total
+	{
+		total of the items in the list;
+	}
+}
