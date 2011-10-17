@@ -13,7 +13,7 @@
 			$coll=$table->find();
 			foreach($coll as $row)
 			{
-				$this->data[0][]=$row;
+				$this->data[]=$row;
 			}
 			//var_dump($this->data);
 			//die();
@@ -22,7 +22,7 @@
 		{
 			foreach($this->data as $row)
 			{
-				if($row[0]['id']==$id)
+				if($row['id']==$id)
 					return $row;
 			}
 		}
@@ -33,7 +33,7 @@
 			#$x=0;
 			foreach($this->data as $object)
 			{
-				if($object[0]['id'] == $row["id"] || $row["id"]=="")
+				if($object['id'] == $row["id"] || $row["id"]=="")
 				{
 					echo "ID UNAVAILABLE!";
 					return 0;
@@ -54,15 +54,10 @@
 		{
 			return $this->data;
 		}
-		public function update($row)
+		public function update($row,$id)
 		{
-			foreach($this->data as &$object)
-			{
-				if($object['id'] == $row["id"])
-				{
-					$object=$row;
-				}						
-			}
+			require 'connect.php';
+			$table->update(array("id" => $id), $row);
 		}
 	}
 
